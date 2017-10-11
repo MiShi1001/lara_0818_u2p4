@@ -39,3 +39,6 @@ Route::group(['prefix'=>'admin'],function(){
         return'admindashboard';
     });
 });
+
+Route::get('/',['as'=>'home.index','uses'=>
+    'HomeController@index']);
