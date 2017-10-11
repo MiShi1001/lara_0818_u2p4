@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',function(){
+    return'welcome';
+});
+
+Route::get('/',function(){
+    returnview('welcome');
+});
+
+Route::get('/',function(){
+    returnredirect('welcome');
 });
