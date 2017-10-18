@@ -13,9 +13,9 @@
 //回傳字串
 
 
-Route::get('hello/{name}',function($name){
-    return'Hello,'.$name;
-});
+Route::get('hello/{name?}',['as'=>'hello.index','uses'=>
+    'HelloController@index']);
+
 
 Route::get('say/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
     return'Hello,'.$name;
