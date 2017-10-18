@@ -12,17 +12,7 @@
 */
 //回傳字串
 
-Route::get('/',function(){
-    return'welcome';
-});
-//回傳view
-Route::get('/',function(){
-    returnview('welcome.blade');
-});
-//跳轉頁面
-Route::get('/',function(){
-    returnredirect('welcome.blade');
-});
+
 Route::get('hello/{name}',function($name){
     return'Hello,'.$name;
 });
@@ -40,5 +30,4 @@ Route::group(['prefix'=>'admin'],function(){
     });
 });
 
-Route::get('/',['as'=>'home.index','uses'=>
-    'HomeController@index']);
+Route::get('/','HomeController@index')->name('home.index');
