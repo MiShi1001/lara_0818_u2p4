@@ -11,7 +11,7 @@
 |
 */
 //回傳字串
-
+/*
 
 Route::get('hello/{name?}',['as'=>'hello.index','uses'=>
     'HelloController@index']);
@@ -29,5 +29,5 @@ Route::group(['prefix'=>'admin'],function(){
         return'admindashboard';
     });
 });
-
+*/
 Route::get('/','HomeController@index')->name('home.index');

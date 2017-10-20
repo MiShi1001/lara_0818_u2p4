@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
 public function index()
 {
-    returnview('welcome');
+    return view('\posts\index');
 
 }
 
