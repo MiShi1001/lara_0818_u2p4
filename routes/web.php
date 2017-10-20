@@ -30,7 +30,7 @@ Route::group(['prefix'=>'admin'],function(){
     });
 });
 */
-Route::get('/','HomeController@index')->name('home.index');
-Route::get('about','AboutController@about')->name('about.index');
-Route::get('blog','BlogController@blog')->name('blog.index');
-Route::get('contact','ContactController@contact')->name('contact.index');
+Route::get('/','HomeController@index')->name('index');
+Route::get('about','AboutController@about')->name('about');
+Route::get('blog','BlogController@blog')->name('blog');
+Route::get('contact','ContactController@contact')->name('contact');
