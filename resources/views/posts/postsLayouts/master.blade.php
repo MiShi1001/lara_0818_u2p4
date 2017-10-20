@@ -39,7 +39,7 @@
 @yield('content')
 
 </div>
-@yield('footer')
+@include('posts.postsLayouts.partials.footer')
 
 </body>
 </html>
