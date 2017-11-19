@@ -10,27 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//回傳字串
-/*
 
-Route::get('hello/{name?}',['as'=>'hello.index','uses'=>
-    'HelloController@index']);
-
-
-Route::get('say/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
-    return'Hello,'.$name;
-}]);
-Route::get('dashboard',function(){
-    return'dashboard';
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::group(['prefix'=>'admin'],function(){
-    Route::get('dashboard',function(){
-        return'admindashboard';
-    });
-});
-*/
-Route::get('/','HomeController@index')->name('index');
-Route::get('about','AboutController@about')->name('about');
-Route::get('blog','BlogController@blog')->name('blog');
-Route::get('contact','ContactController@contact')->name('contact');
+Route::get('index',['as' => 'posts.index',   'uses' => 'PostsController@index']);
+Route::get('about',['as' => 'posts.about',   'uses' => 'PostsController@about']);
+Route::get('blog',['as' => 'posts.blog',   'uses' => 'PostsController@blog']);
+Route::get('contact',['as' => 'posts.contact',   'uses' => 'PostsController@contact']);
