@@ -84,7 +84,7 @@
                     Laravel
                 </div>
                 <div>
-                    <a href="{{route('hello.index')}}">Hello</a>
+                    <a href="{{url('/')}}">Hello</a>
                 </div>
                 <div class="links">
 
